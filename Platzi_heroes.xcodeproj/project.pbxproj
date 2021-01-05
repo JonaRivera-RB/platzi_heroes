@@ -3,27 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		133BB5F625A4E02700502562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB5F525A4E02700502562 /* AppDelegate.swift */; };
 		133BB5F825A4E02700502562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB5F725A4E02700502562 /* SceneDelegate.swift */; };
-		133BB5FA25A4E02700502562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB5F925A4E02700502562 /* ViewController.swift */; };
-		133BB5FD25A4E02700502562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133BB5FB25A4E02700502562 /* Main.storyboard */; };
+		133BB5FA25A4E02700502562 /* HeroesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB5F925A4E02700502562 /* HeroesController.swift */; };
 		133BB5FF25A4E02800502562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133BB5FE25A4E02800502562 /* Assets.xcassets */; };
 		133BB60225A4E02800502562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133BB60025A4E02800502562 /* LaunchScreen.storyboard */; };
+		133BB61D25A4E21900502562 /* +ConstrainsExtension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB61C25A4E21900502562 /* +ConstrainsExtension.swift.swift */; };
+		133BB62225A4E26300502562 /* +UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB62125A4E26300502562 /* +UIViewControllerExtension.swift */; };
+		133BB62525A4E2EE00502562 /* AppConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB62425A4E2EE00502562 /* AppConstans.swift */; };
+		133BB62A25A4E3BB00502562 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB62925A4E3BB00502562 /* API.swift */; };
+		133BB62F25A4E3F400502562 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB62E25A4E3F400502562 /* Routes.swift */; };
+		133BB63325A4E41D00502562 /* HeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB63225A4E41D00502562 /* HeroesUseCase.swift */; };
+		133BB63C25A4E59700502562 /* HeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB63B25A4E59700502562 /* HeroesModel.swift */; };
+		133BB64025A4E5F700502562 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB63F25A4E5F700502562 /* DataFetcher.swift */; };
+		133BB64425A4EA5700502562 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB64325A4EA5700502562 /* HeroesViewModel.swift */; };
+		133BB64825A4EADD00502562 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB64725A4EADD00502562 /* Observable.swift */; };
+		133BB64B25A4F02700502562 /* HeroeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB64A25A4F02700502562 /* HeroeCell.swift */; };
+		133BB65325A4F0FD00502562 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 133BB65225A4F0FD00502562 /* SDWebImage */; };
+		133BB65625A4F16C00502562 /* HeroeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB65525A4F16C00502562 /* HeroeCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		133BB5F225A4E02700502562 /* Platzi_heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Platzi_heroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133BB5F525A4E02700502562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133BB5F725A4E02700502562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		133BB5F925A4E02700502562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		133BB5FC25A4E02700502562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		133BB5F925A4E02700502562 /* HeroesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesController.swift; sourceTree = "<group>"; };
 		133BB5FE25A4E02800502562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133BB60125A4E02800502562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133BB60325A4E02800502562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133BB61C25A4E21900502562 /* +ConstrainsExtension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ConstrainsExtension.swift.swift"; sourceTree = "<group>"; };
+		133BB62125A4E26300502562 /* +UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIViewControllerExtension.swift"; sourceTree = "<group>"; };
+		133BB62425A4E2EE00502562 /* AppConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstans.swift; sourceTree = "<group>"; };
+		133BB62925A4E3BB00502562 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		133BB62E25A4E3F400502562 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		133BB63225A4E41D00502562 /* HeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesUseCase.swift; sourceTree = "<group>"; };
+		133BB63B25A4E59700502562 /* HeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
+		133BB63F25A4E5F700502562 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		133BB64325A4EA5700502562 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		133BB64725A4EADD00502562 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		133BB64A25A4F02700502562 /* HeroeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCell.swift; sourceTree = "<group>"; };
+		133BB65525A4F16C00502562 /* HeroeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133BB65325A4F0FD00502562 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				133BB5F425A4E02700502562 /* Platzi_heroes */,
 				133BB5F325A4E02700502562 /* Products */,
+				133BB65125A4F0FD00502562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,153 @@
 		133BB5F425A4E02700502562 /* Platzi_heroes */ = {
 			isa = PBXGroup;
 			children = (
-				133BB5F525A4E02700502562 /* AppDelegate.swift */,
-				133BB5F725A4E02700502562 /* SceneDelegate.swift */,
-				133BB5F925A4E02700502562 /* ViewController.swift */,
-				133BB5FB25A4E02700502562 /* Main.storyboard */,
-				133BB5FE25A4E02800502562 /* Assets.xcassets */,
-				133BB60025A4E02800502562 /* LaunchScreen.storyboard */,
+				133BB61325A4E07600502562 /* Application */,
+				133BB60F25A4E03700502562 /* WebServices */,
+				133BB60D25A4E03200502562 /* Common */,
+				133BB61025A4E03F00502562 /* Resources */,
+				133BB60A25A4E02F00502562 /* MVVM */,
 				133BB60325A4E02800502562 /* Info.plist */,
 			);
 			path = Platzi_heroes;
+			sourceTree = "<group>";
+		};
+		133BB60A25A4E02F00502562 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				133BB60B25A4E03000502562 /* HeroesView */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		133BB60B25A4E03000502562 /* HeroesView */ = {
+			isa = PBXGroup;
+			children = (
+				133BB61225A4E05F00502562 /* Model */,
+				133BB61125A4E05D00502562 /* View */,
+				133BB60C25A4E03000502562 /* ViewModel */,
+			);
+			path = HeroesView;
+			sourceTree = "<group>";
+		};
+		133BB60C25A4E03000502562 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				133BB64325A4EA5700502562 /* HeroesViewModel.swift */,
+				133BB65525A4F16C00502562 /* HeroeCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		133BB60D25A4E03200502562 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				133BB61B25A4E21300502562 /* Extensions */,
+				133BB61A25A4E21100502562 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		133BB60F25A4E03700502562 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				133BB63525A4E57400502562 /* Models */,
+				133BB62825A4E3B400502562 /* UseCases */,
+				133BB62725A4E3AC00502562 /* ResourcesAPI */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		133BB61025A4E03F00502562 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				133BB61425A4E09400502562 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		133BB61125A4E05D00502562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				133BB5F925A4E02700502562 /* HeroesController.swift */,
+				133BB64A25A4F02700502562 /* HeroeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		133BB61225A4E05F00502562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		133BB61325A4E07600502562 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				133BB60025A4E02800502562 /* LaunchScreen.storyboard */,
+				133BB5F525A4E02700502562 /* AppDelegate.swift */,
+				133BB5F725A4E02700502562 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		133BB61425A4E09400502562 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				133BB5FE25A4E02800502562 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		133BB61A25A4E21100502562 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				133BB62425A4E2EE00502562 /* AppConstans.swift */,
+				133BB64725A4EADD00502562 /* Observable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		133BB61B25A4E21300502562 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				133BB61C25A4E21900502562 /* +ConstrainsExtension.swift.swift */,
+				133BB62125A4E26300502562 /* +UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		133BB62725A4E3AC00502562 /* ResourcesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				133BB62925A4E3BB00502562 /* API.swift */,
+				133BB62E25A4E3F400502562 /* Routes.swift */,
+				133BB63F25A4E5F700502562 /* DataFetcher.swift */,
+			);
+			path = ResourcesAPI;
+			sourceTree = "<group>";
+		};
+		133BB62825A4E3B400502562 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				133BB63225A4E41D00502562 /* HeroesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		133BB63525A4E57400502562 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				133BB63B25A4E59700502562 /* HeroesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		133BB65125A4F0FD00502562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +246,9 @@
 			dependencies = (
 			);
 			name = Platzi_heroes;
+			packageProductDependencies = (
+				133BB65225A4F0FD00502562 /* SDWebImage */,
+			);
 			productName = Platzi_heroes;
 			productReference = 133BB5F225A4E02700502562 /* Platzi_heroes.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +276,9 @@
 				Base,
 			);
 			mainGroup = 133BB5E925A4E02600502562;
+			packageReferences = (
+				133BB64D25A4F0A200502562 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 133BB5F325A4E02700502562 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +295,6 @@
 			files = (
 				133BB60225A4E02800502562 /* LaunchScreen.storyboard in Resources */,
 				133BB5FF25A4E02800502562 /* Assets.xcassets in Resources */,
-				133BB5FD25A4E02700502562 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +305,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133BB5FA25A4E02700502562 /* ViewController.swift in Sources */,
+				133BB64825A4EADD00502562 /* Observable.swift in Sources */,
+				133BB62525A4E2EE00502562 /* AppConstans.swift in Sources */,
+				133BB64025A4E5F700502562 /* DataFetcher.swift in Sources */,
+				133BB63C25A4E59700502562 /* HeroesModel.swift in Sources */,
+				133BB63325A4E41D00502562 /* HeroesUseCase.swift in Sources */,
+				133BB62F25A4E3F400502562 /* Routes.swift in Sources */,
+				133BB5FA25A4E02700502562 /* HeroesController.swift in Sources */,
 				133BB5F625A4E02700502562 /* AppDelegate.swift in Sources */,
+				133BB61D25A4E21900502562 /* +ConstrainsExtension.swift.swift in Sources */,
 				133BB5F825A4E02700502562 /* SceneDelegate.swift in Sources */,
+				133BB62225A4E26300502562 /* +UIViewControllerExtension.swift in Sources */,
+				133BB64B25A4F02700502562 /* HeroeCell.swift in Sources */,
+				133BB65625A4F16C00502562 /* HeroeCellViewModel.swift in Sources */,
+				133BB64425A4EA5700502562 /* HeroesViewModel.swift in Sources */,
+				133BB62A25A4E3BB00502562 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		133BB5FB25A4E02700502562 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				133BB5FC25A4E02700502562 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		133BB60025A4E02800502562 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9446DNP45;
 				INFOPLIST_FILE = Platzi_heroes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9446DNP45;
 				INFOPLIST_FILE = Platzi_heroes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,6 +513,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		133BB64D25A4F0A200502562 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		133BB65225A4F0FD00502562 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 133BB64D25A4F0A200502562 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 133BB5EA25A4E02600502562 /* Project object */;
 }
