@@ -10,13 +10,16 @@ import Foundation
 class HeroesViewModel {
     
     var error: Observable<Bool?> = Observable(nil)
-    var heroesResponse: Observable<HeroesModel?> = Observable(nil)
+    var heroesResponse: Observable<[HeroeList]?> = Observable(nil)
+    private var heroes = [HeroeList]()
+    var page: Int = 1
     
-    func getHeroes(toPage page: String? = nil) {
-        HeroesUseCase.request(toPage: page) { [weak self]  (heroes, error) in
+    func getHeroes() {
+        HeroesUseCase.request(toPage: String(page)) { [weak self]  (heroes, error) in
             
             if let heroes = heroes {
-                self?.heroesResponse.value = heroes
+                self?.heroes += heroes.data?.results ?? []
+                self?.heroesResponse.value = self?.heroes
             }else {
                 self?.error.value = true
             }
@@ -24,11 +27,19 @@ class HeroesViewModel {
     }
     
     var numberOfItemsInSections: Int {
-        return heroesResponse.value?.data?.results?.count ?? 0
+        return heroesResponse.value?.count ?? 0
+    }
+    
+    func getHeroeID(indexPath: Int) -> Int {
+        return heroesResponse.value?[indexPath].id ?? 0
     }
     
     func getHeroe(indexPath: Int) -> HeroeList? {
-        return heroesResponse.value?.data?.results?[indexPath]
+        return heroesResponse.value?[indexPath]
+    }
+    
+    func nextPage() {
+        self.page = self.page + 10
     }
     
     deinit {

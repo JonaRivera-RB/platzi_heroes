@@ -18,6 +18,11 @@ class HeroesController: UICollectionViewController {
         
         viewModel = HeroesViewModel()
         bind()
+        
+        HeroeUseCase.request(toId: "1011334") { (heroe, success) in
+            guard let heroe = heroe else { return }
+            print("the heroe is \(heroe.data?.results?[0].name)")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,6 +78,18 @@ extension HeroesController {
         cell.heroeList = viewModel.getHeroe(indexPath: indexPath.row)
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.numberOfItemsInSections - 1 {
+            viewModel.nextPage()
+            viewModel.getHeroes()
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = DetailHeroeViewController(heroeID: viewModel.getHeroeID(indexPath: indexPath.row))
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

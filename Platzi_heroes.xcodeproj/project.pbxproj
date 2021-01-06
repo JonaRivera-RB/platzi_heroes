@@ -25,6 +25,10 @@
 		133BB64B25A4F02700502562 /* HeroeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB64A25A4F02700502562 /* HeroeCell.swift */; };
 		133BB65325A4F0FD00502562 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 133BB65225A4F0FD00502562 /* SDWebImage */; };
 		133BB65625A4F16C00502562 /* HeroeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB65525A4F16C00502562 /* HeroeCellViewModel.swift */; };
+		133BB69B25A574FC00502562 /* HeroeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB69A25A574FC00502562 /* HeroeDetailModel.swift */; };
+		133BB69F25A5758C00502562 /* HeroeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB69E25A5758C00502562 /* HeroeUseCase.swift */; };
+		133BB6A225A578D100502562 /* DetailHeroeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB6A125A578D100502562 /* DetailHeroeViewController.swift */; };
+		133BB6A525A57B3E00502562 /* DetailHeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB6A425A57B3E00502562 /* DetailHeroViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		133BB64725A4EADD00502562 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		133BB64A25A4F02700502562 /* HeroeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCell.swift; sourceTree = "<group>"; };
 		133BB65525A4F16C00502562 /* HeroeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCellViewModel.swift; sourceTree = "<group>"; };
+		133BB69A25A574FC00502562 /* HeroeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailModel.swift; sourceTree = "<group>"; };
+		133BB69E25A5758C00502562 /* HeroeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeUseCase.swift; sourceTree = "<group>"; };
+		133BB6A125A578D100502562 /* DetailHeroeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroeViewController.swift; sourceTree = "<group>"; };
+		133BB6A425A57B3E00502562 /* DetailHeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		133BB60A25A4E02F00502562 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				133BB69625A574CC00502562 /* HeroeDetail */,
 				133BB60B25A4E03000502562 /* HeroesView */,
 			);
 			path = MVVM;
@@ -130,7 +139,6 @@
 		133BB60F25A4E03700502562 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				133BB63525A4E57400502562 /* Models */,
 				133BB62825A4E3B400502562 /* UseCases */,
 				133BB62725A4E3AC00502562 /* ResourcesAPI */,
 			);
@@ -157,6 +165,7 @@
 		133BB61225A4E05F00502562 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				133BB63B25A4E59700502562 /* HeroesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,16 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				133BB63225A4E41D00502562 /* HeroesUseCase.swift */,
+				133BB69E25A5758C00502562 /* HeroeUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		133BB63525A4E57400502562 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				133BB63B25A4E59700502562 /* HeroesModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		133BB65125A4F0FD00502562 /* Frameworks */ = {
@@ -228,6 +230,40 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		133BB69625A574CC00502562 /* HeroeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				133BB69925A574DF00502562 /* Model */,
+				133BB69825A574DB00502562 /* ViewModel */,
+				133BB69725A574D800502562 /* View */,
+			);
+			path = HeroeDetail;
+			sourceTree = "<group>";
+		};
+		133BB69725A574D800502562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				133BB6A125A578D100502562 /* DetailHeroeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		133BB69825A574DB00502562 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				133BB6A425A57B3E00502562 /* DetailHeroViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		133BB69925A574DF00502562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				133BB69A25A574FC00502562 /* HeroeDetailModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,13 +349,17 @@
 				133BB62F25A4E3F400502562 /* Routes.swift in Sources */,
 				133BB5FA25A4E02700502562 /* HeroesController.swift in Sources */,
 				133BB5F625A4E02700502562 /* AppDelegate.swift in Sources */,
+				133BB69B25A574FC00502562 /* HeroeDetailModel.swift in Sources */,
 				133BB61D25A4E21900502562 /* +ConstrainsExtension.swift.swift in Sources */,
 				133BB5F825A4E02700502562 /* SceneDelegate.swift in Sources */,
 				133BB62225A4E26300502562 /* +UIViewControllerExtension.swift in Sources */,
 				133BB64B25A4F02700502562 /* HeroeCell.swift in Sources */,
 				133BB65625A4F16C00502562 /* HeroeCellViewModel.swift in Sources */,
 				133BB64425A4EA5700502562 /* HeroesViewModel.swift in Sources */,
+				133BB69F25A5758C00502562 /* HeroeUseCase.swift in Sources */,
+				133BB6A525A57B3E00502562 /* DetailHeroViewModel.swift in Sources */,
 				133BB62A25A4E3BB00502562 /* API.swift in Sources */,
+				133BB6A225A578D100502562 /* DetailHeroeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
