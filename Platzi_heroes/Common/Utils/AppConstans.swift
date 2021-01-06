@@ -11,4 +11,5 @@ struct AppConstans {
     static let navigationTitleHome = "Heroes"
     static let VARIANT_NAME = "standard_large"
     static let REUSE_IDENTIFIER_HEROE_COLLECTION = "heroeIdentifier"
+    static let REUSE_IDENTIFIER_HEROE_COMIC_COLLECTION = "HeroeSerieCell"
 }

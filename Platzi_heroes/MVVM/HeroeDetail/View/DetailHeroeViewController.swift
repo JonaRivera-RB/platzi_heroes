@@ -30,7 +30,7 @@ class DetailHeroeViewController: UIViewController {
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 2
-        label.text = "Cargando..."
+        label.text = "Loading..."
         return label
     }()
     
@@ -40,7 +40,7 @@ class DetailHeroeViewController: UIViewController {
         label.textColor = .black
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 2
-        label.text = "Descripción:"
+        label.text = "Description:"
         return label
     }()
     
@@ -50,8 +50,32 @@ class DetailHeroeViewController: UIViewController {
         label.textColor = .black
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 20
-        label.text = "Cargando..."
+        label.text = "Loading..."
         return label
+    }()
+    
+    private var comicsHeroeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .black
+        label.lineBreakMode = .byTruncatingTail
+        label.numberOfLines = 20
+        label.text = "Comics:"
+        return label
+    }()
+    
+    private lazy var comicsCollectionview: UICollectionView = {
+        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        
+        collection.setCollectionViewLayout(layout, animated: true)
+        collection.register(HeroeSerieCell.self, forCellWithReuseIdentifier: AppConstans.REUSE_IDENTIFIER_HEROE_COMIC_COLLECTION)
+        collection.backgroundColor = .white
+        collection.delegate = self
+        collection.dataSource = self
+        
+        return collection
     }()
     
     private var viewModel: DetailHeroViewModel!
@@ -71,7 +95,7 @@ class DetailHeroeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        configureNavigationBarInViewController(largeTitleColor: .blue, backgoundColor: .white, tintColor: .blue, title: "Descripción", preferredLargeTitle: true)
+        configureNavigationBarInViewController(largeTitleColor: .blue, backgoundColor: .white, tintColor: .blue, title: "Description", preferredLargeTitle: true)
         
         viewModel.getHeroe(heroeID: heroeID)
         bind()
@@ -100,7 +124,13 @@ class DetailHeroeViewController: UIViewController {
         mainStack.distribution = .equalSpacing
         
         scrollView.addSubview(mainStack)
-        mainStack.anchor(top: heroeNameLabel.bottomAnchor, left: scrollView.leftAnchor, bottom: scrollView.bottomAnchor, right: scrollView.rightAnchor, paddingTop: 2, paddingLeft: 10, paddingRight: 10)
+        mainStack.anchor(top: heroeNameLabel.bottomAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor, paddingTop: 2, paddingLeft: 10, paddingRight: 10)
+        
+        scrollView.addSubview(comicsHeroeLabel)
+        comicsHeroeLabel.anchor(top: mainStack.bottomAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor, paddingTop: 20, paddingLeft: 10, paddingRight: 10)
+        
+        scrollView.addSubview(comicsCollectionview)
+        comicsCollectionview.anchor(top: comicsHeroeLabel.bottomAnchor, left: scrollView.leftAnchor, bottom: scrollView.bottomAnchor, right: scrollView.rightAnchor, paddingTop: 0, paddingLeft: 20, paddingRight: 20, height: 220)
     }
     
     //MARK: - Helpers
@@ -113,6 +143,7 @@ class DetailHeroeViewController: UIViewController {
         
         viewModel.heroeResponse.observe(on: self) { [weak self] _ in
             self?.setupLabels()
+            self?.comicsCollectionview.reloadData()
         }
     }
     
@@ -126,3 +157,25 @@ class DetailHeroeViewController: UIViewController {
         descriptionHeroeTwoLabel.text = viewModel.description
     }
 }
+
+//MARK: UICollectionViewDelegate, UICollectionViewDataSource
+extension DetailHeroeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfComics
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstans.REUSE_IDENTIFIER_HEROE_COMIC_COLLECTION, for: indexPath) as? HeroeSerieCell else { fatalError() }
+        cell.comicsItem = viewModel.getComicItem(indexPath: indexPath.row)
+        
+        return cell
+    }
+}
+
+//MARK: UICollectionViewDelegateFlowLayout
+extension DetailHeroeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 3, height: 200)
+    }
+}
+

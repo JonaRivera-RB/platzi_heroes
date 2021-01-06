@@ -29,6 +29,7 @@
 		133BB69F25A5758C00502562 /* HeroeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB69E25A5758C00502562 /* HeroeUseCase.swift */; };
 		133BB6A225A578D100502562 /* DetailHeroeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB6A125A578D100502562 /* DetailHeroeViewController.swift */; };
 		133BB6A525A57B3E00502562 /* DetailHeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB6A425A57B3E00502562 /* DetailHeroViewModel.swift */; };
+		133BB6AB25A60DB000502562 /* HeroeSerieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB6AA25A60DB000502562 /* HeroeSerieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		133BB69E25A5758C00502562 /* HeroeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeUseCase.swift; sourceTree = "<group>"; };
 		133BB6A125A578D100502562 /* DetailHeroeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroeViewController.swift; sourceTree = "<group>"; };
 		133BB6A425A57B3E00502562 /* DetailHeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroViewModel.swift; sourceTree = "<group>"; };
+		133BB6AA25A60DB000502562 /* HeroeSerieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeSerieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				133BB6A125A578D100502562 /* DetailHeroeViewController.swift */,
+				133BB6AA25A60DB000502562 /* HeroeSerieCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				133BB63C25A4E59700502562 /* HeroesModel.swift in Sources */,
 				133BB63325A4E41D00502562 /* HeroesUseCase.swift in Sources */,
 				133BB62F25A4E3F400502562 /* Routes.swift in Sources */,
+				133BB6AB25A60DB000502562 /* HeroeSerieCell.swift in Sources */,
 				133BB5FA25A4E02700502562 /* HeroesController.swift in Sources */,
 				133BB5F625A4E02700502562 /* AppDelegate.swift in Sources */,
 				133BB69B25A574FC00502562 /* HeroeDetailModel.swift in Sources */,

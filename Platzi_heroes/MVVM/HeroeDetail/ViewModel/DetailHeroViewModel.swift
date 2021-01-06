@@ -39,6 +39,14 @@ class DetailHeroViewModel {
         return URL(string: thumbnail+"/landscape_xlarge."+thumbnailExtension)!
     }
     
+    var numberOfComics: Int {
+        return heroeResponse.value?.data?.results?[0].comics?.items?.count ?? 0
+    }
+    
+    func getComicItem(indexPath: Int) -> ComicsItem? {
+        return heroeResponse.value?.data?.results?[0].comics?.items?[indexPath]
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }

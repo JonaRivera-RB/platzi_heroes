@@ -18,11 +18,6 @@ class HeroesController: UICollectionViewController {
         
         viewModel = HeroesViewModel()
         bind()
-        
-        HeroeUseCase.request(toId: "1011334") { (heroe, success) in
-            guard let heroe = heroe else { return }
-            print("the heroe is \(heroe.data?.results?[0].name)")
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
